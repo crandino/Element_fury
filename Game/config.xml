@@ -1,0 +1,37 @@
+<!-- Config file for the game -->
+
+<config>
+
+  <!-- App Configuration -->
+  <app framerate="0" />
+  
+  <!-- Each module has its own node. Separate configuration -->
+  <input>
+  </input>
+
+  <font>
+    <default_font size="12" file="fonts/open_sans/OpenSans-Regular.ttf"/>
+  </font>
+
+  <gui>
+    <atlas file="gui/atlas.png"/>
+  </gui>
+
+  <window>
+    <resolution width="800" height="600" scale="1"  />
+    <properties borderless='false'
+                fullscreen='false' 
+                resizable='false'
+                windowed='false' />
+    <name>My super awesome game with XML</name>
+  </window>
+
+  <file_system>
+    <path>data.zip</path>
+  </file_system>
+
+  <map>
+    <folder>maps/</folder>
+  </map>
+  
+</config>
