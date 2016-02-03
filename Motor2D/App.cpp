@@ -7,11 +7,7 @@
 #include "Textures.h"
 #include "Audio.h"
 #include "Scene.h"
-#include "Maps.h"
-#include "Fonts.h"
-#include "Gui.h"
 #include "FileSystem.h"
-#include "PathFinding.h"
 #include "App.h"
 
 #include <iostream> 
@@ -27,11 +23,7 @@ App::App(int argc, char* args[]) : argc(argc), args(args)
 	render = new Render();
 	tex = new Textures();
 	audio = new Audio();
-	fonts = new Fonts();
-	gui = new Gui();
 	scene = new Scene();
-	map = new Maps();
-	path = new PathFinding();
 	fs = new FileSystem();
 
 	// Ordered for awake / start / update
@@ -41,10 +33,6 @@ App::App(int argc, char* args[]) : argc(argc), args(args)
 	addModule(win);
 	addModule(tex);
 	addModule(audio);
-	addModule(map);
-	addModule(path);
-	addModule(fonts);
-	addModule(gui);
 	
 	addModule(scene);
 

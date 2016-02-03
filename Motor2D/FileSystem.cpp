@@ -3,8 +3,6 @@
 #include "SDL\include\SDL.h"
 #include "PhysFS\include\physfs.h"
 
-#pragma comment (lib, "Motor2D/PhysFS/libx86/physfs.lib")
-
 FileSystem::FileSystem()
 {
 	name.create("file_system");

@@ -5,9 +5,6 @@
 #include "App.h"
 
 #pragma comment (lib, "Motor2D/SDL/libx86/SDL2.lib")
-//#pragma comment (lib, "Motor2D/SDL_mixer/libx86/SDL2_mixer.lib")
-//#pragma comment (lib, "Motor2D/SDL_image/libx86/SDL2_image.lib")
-//#pragma comment (lib, "Motor2D/SDL_ttf/libx86/SDL2_ttf.lib")
 
 // Due to a problem with SDL:
 //"  Error1 error LNK2005: _main already defined in

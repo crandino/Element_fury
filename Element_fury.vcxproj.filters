@@ -48,28 +48,13 @@
     <ClCompile Include="Motor2D\FileSystem.cpp">
       <Filter>Motor2D</Filter>
     </ClCompile>
-    <ClCompile Include="Motor2D\Fonts.cpp">
-      <Filter>Motor2D</Filter>
-    </ClCompile>
-    <ClCompile Include="Motor2D\Gui.cpp">
-      <Filter>Motor2D</Filter>
-    </ClCompile>
     <ClCompile Include="Motor2D\Input.cpp">
-      <Filter>Motor2D</Filter>
-    </ClCompile>
-    <ClCompile Include="Motor2D\Maps.cpp">
-      <Filter>Motor2D</Filter>
-    </ClCompile>
-    <ClCompile Include="Motor2D\PathFinding.cpp">
       <Filter>Motor2D</Filter>
     </ClCompile>
     <ClCompile Include="Motor2D\Render.cpp">
       <Filter>Motor2D</Filter>
     </ClCompile>
     <ClCompile Include="Motor2D\Textures.cpp">
-      <Filter>Motor2D</Filter>
-    </ClCompile>
-    <ClCompile Include="Motor2D\UIelements.cpp">
       <Filter>Motor2D</Filter>
     </ClCompile>
     <ClCompile Include="Motor2D\Window.cpp">
@@ -121,31 +106,16 @@
     <ClInclude Include="Motor2D\FileSystem.h">
       <Filter>Motor2D</Filter>
     </ClInclude>
-    <ClInclude Include="Motor2D\Fonts.h">
-      <Filter>Motor2D</Filter>
-    </ClInclude>
-    <ClInclude Include="Motor2D\Gui.h">
-      <Filter>Motor2D</Filter>
-    </ClInclude>
     <ClInclude Include="Motor2D\Input.h">
       <Filter>Motor2D</Filter>
     </ClInclude>
-    <ClInclude Include="Motor2D\Maps.h">
-      <Filter>Motor2D</Filter>
-    </ClInclude>
     <ClInclude Include="Motor2D\Module.h">
-      <Filter>Motor2D</Filter>
-    </ClInclude>
-    <ClInclude Include="Motor2D\PathFinding.h">
       <Filter>Motor2D</Filter>
     </ClInclude>
     <ClInclude Include="Motor2D\Render.h">
       <Filter>Motor2D</Filter>
     </ClInclude>
     <ClInclude Include="Motor2D\Textures.h">
-      <Filter>Motor2D</Filter>
-    </ClInclude>
-    <ClInclude Include="Motor2D\UIelements.h">
       <Filter>Motor2D</Filter>
     </ClInclude>
     <ClInclude Include="Motor2D\Window.h">

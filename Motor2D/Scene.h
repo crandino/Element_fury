@@ -4,7 +4,6 @@
 #include "Module.h"
 
 struct SDL_Texture;
-class UIlabel;
 
 class Scene : public Module
 {
@@ -33,12 +32,7 @@ public:
 	// Called before quitting
 	bool cleanUp();
 
-	void Scene::onGui(MOUSE_EVENTS mouse_event, UIelement *trigger);
-
 private:
-
-	// EXERCISE 5
-	UIlabel *counter;
 
 	float player_x;
 	float player_y;
@@ -47,8 +41,6 @@ private:
 	bool path_selected;
 	iPoint origin;
 	iPoint destination;
-
-	bool move_locked;
 
 };
 

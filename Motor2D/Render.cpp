@@ -4,8 +4,6 @@
 #include "Window.h"
 #include "Render.h"
 
-#define VSYNC false
-
 Render::Render() : Module()
 {
 	name.create("renderer");
@@ -27,7 +25,7 @@ bool Render::awake(pugi::xml_node &node)
 	// load flags
 	Uint32 flags = SDL_RENDERER_ACCELERATED;
 
-	if(VSYNC == true)
+	if (node.attribute("vsync").as_bool())
 	{
 		flags |= SDL_RENDERER_PRESENTVSYNC;
 	}

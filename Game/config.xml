@@ -9,29 +9,20 @@
   <input>
   </input>
 
-  <font>
-    <default_font size="12" file="fonts/open_sans/OpenSans-Regular.ttf"/>
-  </font>
-
-  <gui>
-    <atlas file="gui/atlas.png"/>
-  </gui>
-
   <window>
-    <resolution width="800" height="600" scale="1"  />
-    <properties borderless='false'
-                fullscreen='false' 
+    <resolution width="1920" height="1080" scale="1"  />
+    <properties borderless='true'
+                fullscreen='true' 
                 resizable='false'
                 windowed='false' />
-    <name>My super awesome game with XML</name>
+    <name>Element Fury</name>
   </window>
+
+  <render vsync='false'>
+  </render>
 
   <file_system>
     <path>data.zip</path>
   </file_system>
-
-  <map>
-    <folder>maps/</folder>
-  </map>
   
 </config>

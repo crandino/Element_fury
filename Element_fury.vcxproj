@@ -68,20 +68,15 @@
     <ClCompile Include="Motor2D\App.cpp" />
     <ClCompile Include="Motor2D\Audio.cpp" />
     <ClCompile Include="Motor2D\FileSystem.cpp" />
-    <ClCompile Include="Motor2D\Fonts.cpp" />
-    <ClCompile Include="Motor2D\Gui.cpp" />
     <ClCompile Include="Motor2D\Input.cpp" />
     <ClCompile Include="Motor2D\main.cpp" />
-    <ClCompile Include="Motor2D\Maps.cpp" />
     <ClCompile Include="Motor2D\p2Log.cpp" />
-    <ClCompile Include="Motor2D\PathFinding.cpp" />
     <ClCompile Include="Motor2D\PerfTimer.cpp" />
     <ClCompile Include="Motor2D\PugiXml\src\pugixml.cpp" />
     <ClCompile Include="Motor2D\Render.cpp" />
     <ClCompile Include="Motor2D\Scene.cpp" />
     <ClCompile Include="Motor2D\Textures.cpp" />
     <ClCompile Include="Motor2D\Timer.cpp" />
-    <ClCompile Include="Motor2D\UIelements.cpp" />
     <ClCompile Include="Motor2D\Window.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -93,15 +88,11 @@
     <ClInclude Include="Motor2D\DList.h" />
     <ClInclude Include="Motor2D\DynArray.h" />
     <ClInclude Include="Motor2D\FileSystem.h" />
-    <ClInclude Include="Motor2D\Fonts.h" />
-    <ClInclude Include="Motor2D\Gui.h" />
     <ClInclude Include="Motor2D\Input.h" />
-    <ClInclude Include="Motor2D\Maps.h" />
     <ClInclude Include="Motor2D\Module.h" />
     <ClInclude Include="Motor2D\p2Defs.h" />
     <ClInclude Include="Motor2D\p2Log.h" />
     <ClInclude Include="Motor2D\p2SString.h" />
-    <ClInclude Include="Motor2D\PathFinding.h" />
     <ClInclude Include="Motor2D\PerfTimer.h" />
     <ClInclude Include="Motor2D\Point2d.h" />
     <ClInclude Include="Motor2D\PugiXml\src\pugiconfig.hpp" />
@@ -110,7 +101,6 @@
     <ClInclude Include="Motor2D\Scene.h" />
     <ClInclude Include="Motor2D\Textures.h" />
     <ClInclude Include="Motor2D\Timer.h" />
-    <ClInclude Include="Motor2D\UIelements.h" />
     <ClInclude Include="Motor2D\Window.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

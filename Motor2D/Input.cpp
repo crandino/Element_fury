@@ -3,7 +3,6 @@
 #include "App.h"
 #include "Input.h"
 #include "Window.h"
-#include "UIelements.h"
 #include "SDL/include/SDL.h"
 
 #define MAX_KEYS 300
@@ -15,8 +14,6 @@ Input::Input() : Module()
 	keyboard = new KeyState[MAX_KEYS];
 	memset(keyboard, KEY_IDLE, sizeof(KeyState) * MAX_KEYS);
 	memset(mouse_buttons, KEY_IDLE, sizeof(KeyState) * NUM_MOUSE_BUTTONS);
-
-	input_box = NULL;
 
 }
 
@@ -55,11 +52,6 @@ bool Input::preUpdate()
 	static SDL_Event event;
 	const Uint8* keys = SDL_GetKeyboardState(NULL);
 	mouse_motion_x = mouse_motion_y = 0;
-
-	p2SString t;
-	if( input_box != NULL )	
-		t.create(input_box->text.text.GetString());
-	bool UI_text_changed = false;	
 
 	for (int i = 0; i < MAX_KEYS; i++)
 	{
@@ -126,16 +118,6 @@ bool Input::preUpdate()
 			//LOG("Mouse button %d up", event.button.button-1);
 			break;
 
-		case SDL_TEXTINPUT:
-			/* Add new text onto the end of our text */	
-			if (t.Length() < MAX_STRING_UI)
-			{
-				t += event.text.text;
-				UI_text_changed = true;
-				input_box->cursor_index++;
-			}		
-			break;
-
 		case SDL_MOUSEMOTION:
 			int scale = app->win->getScale();
 			mouse_motion_x = event.motion.xrel / scale;
@@ -147,15 +129,6 @@ bool Input::preUpdate()
 		}
 	}
 
-	if (UI_text_changed)
-	{
-		input_box->text.setText(t.GetString());
-		for (doubleNode<Module*> *item = input_box->mod_listeners.getLast(); item != NULL; item = item->previous)
-		{
-			item->data->onGui(TEXT_CHANGED, input_box);
-		}
-	}
-	
 	return true;
 }
 
@@ -186,19 +159,4 @@ iPoint Input::getMouseMotion()
 	return iPoint(mouse_motion_x, mouse_motion_y);
 	/*x = mouse_motion_x;
 	y = mouse_motion_y;*/
-}
-
-// Input text methods for GUI
-void Input::startTextInput(UIinputBox* u)
-{
-	if (!SDL_IsTextInputActive())
-		SDL_StartTextInput();
-	input_box = u;
-}
-
-void Input::stopTextInput()
-{
-	if (SDL_IsTextInputActive())
-		SDL_StopTextInput();
-	input_box = NULL;
 }

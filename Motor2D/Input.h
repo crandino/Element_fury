@@ -9,7 +9,6 @@
 //#define LAST_KEYS_PRESSED_BUFFER 50
 
 struct SDL_Rect;
-class UIinputBox;
 
 enum EventWindow
 {
@@ -31,8 +30,6 @@ class Input : public Module
 {
 
 public:
-
-	UIinputBox  *input_box;
 
 	Input();
 
@@ -81,13 +78,7 @@ private:
 	int			mouse_motion_y;
 	int			mouse_x;
 	int			mouse_y;
-
-
-	// TextInput for GUI
-	public:
-
-	void startTextInput(UIinputBox* u);
-	void stopTextInput();
+	
 };
 
 #endif // __INPUT_H__
