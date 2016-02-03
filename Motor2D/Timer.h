@@ -15,6 +15,7 @@ public:
 	float readSec() const;
 
 private:
+
 	uint32	started_at;
 };
 

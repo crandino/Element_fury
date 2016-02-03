@@ -6,6 +6,7 @@
 #include "Render.h"
 #include "Textures.h"
 #include "Audio.h"
+#include "LevelManager.h"
 #include "Scene.h"
 #include "FileSystem.h"
 #include "App.h"
@@ -23,6 +24,7 @@ App::App(int argc, char* args[]) : argc(argc), args(args)
 	render = new Render();
 	tex = new Textures();
 	audio = new Audio();
+	level_manager = new LevelManager();
 	scene = new Scene();
 	fs = new FileSystem();
 
@@ -33,6 +35,7 @@ App::App(int argc, char* args[]) : argc(argc), args(args)
 	addModule(win);
 	addModule(tex);
 	addModule(audio);
+	addModule(level_manager);
 	
 	addModule(scene);
 
@@ -53,7 +56,6 @@ App::~App()
 	}
 
 	modules.clear();
-
 	config_file.reset();
 }
 
@@ -158,7 +160,7 @@ void App::prepareUpdate()
 	timer.start();
 
 	// Calculate dt. Differential time since last frame.
-	dt = dt_timer.readSec() * 1000.0f;
+	dt = dt_timer.read();
 	dt_timer.start();
 }
 
@@ -175,7 +177,7 @@ void App::finishUpdate()
 	// Average FPS for the whole game life
 	avg_fps = frame_count / seconds_since_startup;
 	// Amount of ms took the last update
-	last_frame_ms = timer.readSec() * 1000.0f;
+	last_frame_ms = timer.read();
 	// Amount of frames during the last second
 	if (seconds_since_startup - last_time > 1.0f)
 	{
@@ -193,10 +195,12 @@ void App::finishUpdate()
 	// Delay to achieve cap framerate
 	if (frame_rate != 0)
 	{
-		if ((1000.0f / frame_rate) - (last_frame_ms) > 0)
+		if (((1000.0f / frame_rate) - last_frame_ms) > 0)
 		{
-			Uint32 delay = (1000.0f / frame_rate) - (last_frame_ms);
+			Uint32 delay = (1000.0f / frame_rate) - last_frame_ms;
+			perf_timer.start();
 			SDL_Delay(delay);
+			LOG("Time to delay: %d , Time delayed %f", delay, perf_timer.readMs());
 		}						
 	}	
 }
@@ -391,5 +395,5 @@ bool App::saveGameNow() const
 
 uint App::getFrameRate() const
 {
-	return frame_rate;
+	return frames_on_last_update != 0 ? frames_on_last_update : 30;
 }

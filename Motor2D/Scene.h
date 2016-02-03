@@ -34,14 +34,6 @@ public:
 
 private:
 
-	float player_x;
-	float player_y;
-	SDL_Texture* debug_tex;
-
-	bool path_selected;
-	iPoint origin;
-	iPoint destination;
-
 };
 
 #endif // __SCENE_H__

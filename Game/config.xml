@@ -6,13 +6,11 @@
   <app framerate="0" />
   
   <!-- Each module has its own node. Separate configuration -->
-  <input>
-  </input>
 
   <window>
-    <resolution width="1920" height="1080" scale="1"  />
-    <properties borderless='true'
-                fullscreen='true' 
+    <resolution width="1280" height="800" scale="1"  />
+    <properties borderless='false'
+                fullscreen='false' 
                 resizable='false'
                 windowed='false' />
     <name>Element Fury</name>
@@ -20,6 +18,23 @@
 
   <render vsync='false'>
   </render>
+
+  <level_manager>
+    <general_conf num_of_levels='3' />
+
+    <levels_data>
+      <level1 fire_ratio='40'
+              ice_ratio='50'
+              grass_ratio='10'/>
+      <level2 fire_ratio='30'
+               ice_ratio='40'
+               grass_ratio='30'/>
+      <level3 fire_ratio='10'
+              ice_ratio='10'
+              grass_ratio='80'/>
+    </levels_data>
+    
+  </level_manager>
 
   <file_system>
     <path>data.zip</path>

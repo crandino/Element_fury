@@ -8,10 +8,6 @@
 #include "Window.h"
 #include "Scene.h"
 
-
-#define FRAME_LOGIC 60
-#define MS_PER_LOGIC_FRAME 1000.0f/FRAME_LOGIC
-
 Scene::Scene() : Module()
 {
 	name.create("scene");
@@ -45,7 +41,7 @@ bool Scene::preUpdate()
 // Called each loop iteration
 bool Scene::update(float dt)
 {
-	float cam_speed = ceil(25.0f * (dt/MS_PER_LOGIC_FRAME));
+	float cam_speed = 1.0f;
 
 	/*if (app->input->getKey(SDL_SCANCODE_L) == KEY_DOWN)
 		app->loadGame("save_game.xml");

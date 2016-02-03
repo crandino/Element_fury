@@ -15,6 +15,7 @@ class Textures;
 class Audio;
 class FileSystem;
 class Scene;
+class LevelManager;
 
 class App
 {
@@ -83,6 +84,7 @@ public:
 	Render*				render;
 	Textures*			tex;
 	Audio*				audio;
+	LevelManager*		level_manager;
 	Scene*				scene;
 	FileSystem*			fs;
 

@@ -66,6 +66,9 @@
     <ClCompile Include="Motor2D\PugiXml\src\pugixml.cpp">
       <Filter>Tools\PugiXML</Filter>
     </ClCompile>
+    <ClCompile Include="Motor2D\LevelManager.cpp">
+      <Filter>Motor2D</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Xml Include="Game\config.xml">
@@ -129,6 +132,9 @@
     </ClInclude>
     <ClInclude Include="Motor2D\PugiXml\src\pugixml.hpp">
       <Filter>Tools\PugiXML</Filter>
+    </ClInclude>
+    <ClInclude Include="Motor2D\LevelManager.h">
+      <Filter>Motor2D</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
